@@ -3,6 +3,7 @@ name: Send Slack Notification
 on:
   schedule:
     - cron: '0 0 * * *'
+  workflow_dispatch:  # ✅ 수동 실행 버튼 활성화
 
 jobs:
   send_slack:
