@@ -11,6 +11,7 @@
 1. Slack에서 봇 토큰을 발급받아 `SLACK_BOT_TOKEN` 값을 준비합니다.
 2. 메시지를 전송할 채널 ID를 `SLACK_CHANNEL` 값으로 사용합니다.
 3. 저장소의 **Settings > Secrets** 메뉴에서 `SLACK_BOT_TOKEN`, `SLACK_CHANNEL` 두 값을 등록합니다.
+4. 위 값이 설정되지 않으면 스크립트는 메시지 전송을 건너뜁니다.
 
 ## 수동 실행
 로컬 환경에서 테스트하려면 다음 명령어를 실행합니다.
