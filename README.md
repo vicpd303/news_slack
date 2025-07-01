@@ -16,12 +16,19 @@
 6. 오류 발생 시 슬랙 채널로 간단한 보고를 보내려면 `SLACK_ERROR_CHANNEL`
    변수를 채널 ID로 지정합니다 (기본값은 `SLACK_CHANNEL`).
 
+## Gemini 연동 방법
+Gemini API를 사용하면 프롬프트 대신 Gemini 모델이 생성한 메시지를 전송할 수 있습니다.
+1. [Google AI Studio](https://aistudio.google.com/app/apikey)에서 API 키를 발급받아 `GEMINI_API_KEY` 값으로 설정합니다.
+2. `pip install google-generativeai` 명령으로 `google-generativeai` 패키지를 설치해야 합니다.
+3. `GEMINI_API_KEY`가 설정되지 않으면 로컬의 `prompt.txt` 내용이 그대로 사용됩니다.
+
 ## 수동 실행
 로컬 환경에서 테스트하려면 다음 명령어를 실행합니다.
 
 ```bash
 export SLACK_BOT_TOKEN=your_token
 export SLACK_CHANNEL=your_channel
+export GEMINI_API_KEY=your_gemini_api_key  # optional
 export LOG_LEVEL=DEBUG  # optional
 python send_slack_notification.py
 ```
